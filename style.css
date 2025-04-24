@@ -366,7 +366,7 @@ nav ul li a {
 }
 
 .hero-container {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 905, 0.05);
   border-radius: 1rem;
   padding: 3rem;
   backdrop-filter: blur(10px);
@@ -616,7 +616,6 @@ code.language-python .comment { color: var(--code-comment); }
 }
 
 /* Interactive Button Styling */
-/* Interactive Button Styling */
 .interactive-btn {
   position: relative;
   background: var(--cyan);
@@ -634,6 +633,7 @@ code.language-python .comment { color: var(--code-comment); }
   width: 100%;
   max-width: 100px;
 }
+
 /* Reflection Effect */
 .interactive-btn::after {
   content: '';
@@ -681,7 +681,6 @@ code.language-python .comment { color: var(--code-comment); }
   flex-wrap: nowrap;
   overflow-x: auto;
   width: 100%;
-  
 }
 
 .social-icons a {
@@ -694,9 +693,8 @@ code.language-python .comment { color: var(--code-comment); }
   align-items: center;
   flex-wrap: nowrap;
   overflow-x: auto;
-  display: flex;        /* Enables flexbox layout */
-  gap: 16px;  
-  
+  display: flex;
+  gap: 16px;
 }
 
 /* Footer */
@@ -800,6 +798,12 @@ footer {
 
   .chat-bubble {
     display: block; /* Show on mobile */
+  }
+
+  /* Center CV Buttons on Mobile with Adjusted Margin-Left */
+  .cv-buttons {
+    justify-content: center;
+    margin-left: 1rem; /* Shift the entire button group slightly to the right */
   }
 }
 
