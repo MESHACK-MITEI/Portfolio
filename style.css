@@ -35,6 +35,7 @@ body {
   --code-keyword: #FF79C6;
   --code-string: #F1FA8C;
   --code-comment: #6272A4;
+  --kenyan-green: #34C759; /* Added for logo integration */
 }
 
 /* Utility Classes */
@@ -52,6 +53,11 @@ body {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-20 {
@@ -111,6 +117,10 @@ body {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-8 {
+  gap: 2rem;
 }
 
 .gap-12 {
@@ -173,6 +183,16 @@ body {
   height: 12rem;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
+.md\:h-12 {
+  @media (min-width: 768px) {
+    height: 3rem;
+  }
+}
+
 .md\:w-1\/2 {
   @media (min-width: 768px) {
     width: 50%;
@@ -191,6 +211,22 @@ body {
   }
 }
 
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
 .text-2xl {
   font-size: 1.5rem;
 }
@@ -203,19 +239,27 @@ body {
   font-size: 3rem;
 }
 
-.md\:text-6xl {
+.md\:text-base {
   @media (min-width: 768px) {
-    font-size: 3.75rem;
+    font-size: 1rem;
   }
 }
 
-.text-xl {
-  font-size: 1.25rem;
+.md\:text-lg {
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
 }
 
 .md\:text-2xl {
   @media (min-width: 768px) {
     font-size: 1.5rem;
+  }
+}
+
+.md\:text-6xl {
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
   }
 }
 
@@ -249,6 +293,10 @@ body {
 
 .text-cyan {
   color: var(--cyan);
+}
+
+.text-white {
+  color: #ffffff;
 }
 
 .bg-navy {
@@ -355,6 +403,16 @@ nav ul li a {
   font-size: 1.1rem;
 }
 
+/* Logo Styling */
+nav img {
+  transition: transform 0.3s ease;
+}
+
+nav img:hover {
+  transform: scale(1.05);
+}
+
+
 /* Hero Section */
 #home {
   background: linear-gradient(180deg, var(--navy) 0%, var(--gray-800) 100%);
@@ -384,9 +442,9 @@ nav ul li a {
 }
 
 .hexagon-container {
-  --hex-size: 300px; /* Increased from 200px to 280px (40% larger) */
+  --hex-size: 300px;
   width: var(--hex-size);
-  height: calc(var(--hex-size) * 1.1547); /* Maintains perfect hexagon proportions */
+  height: calc(var(--hex-size) * 1.1547);
   margin: 0 auto;
 }
 
@@ -398,16 +456,16 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensures image stays within hexagon */
+  overflow: hidden;
 }
 
 .hexagon-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-   object-position: center 25%;
-   transform: scale(1.1) translateY(5%); /* Zoom + vertical adjustment */
-  }
+  object-position: center 25%;
+  transform: scale(1.1) translateY(5%);
+}
 
 .hexagon-glow {
   position: absolute;
@@ -863,4 +921,21 @@ footer {
 /* Add Hidden Class for Toggle Functionality */
 .hidden {
   display: none;
+}
+/* Hover effect (pulse animation) */
+img[src*="logo"]:hover {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; transform: scale(1.05); }
+  100% { opacity: 1; }
+}
+
+/* Dark mode adaptation (if SVG) */
+@media (prefers-color-scheme: dark) {
+  img[src*="logo"] {
+    filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 8px cyan);
+  }
 }
