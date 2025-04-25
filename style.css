@@ -11,16 +11,16 @@ html {
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #1A202C; /* Navy, matches the image */
-  color: #F7FAFC; /* Off-white, matches the image */
+  background-color: #1A202C; /* Navy */
+  color: #F7FAFC; /* Off-white */
   line-height: 1.6;
 }
 
-.ab{
+.ab {
   size: 80px;
 }
 
-/* Custom Color Variables (already matching the image) */
+/* Custom Color Variables */
 :root {
   --navy: #1A202C;
   --cyan: #00D4FF;
@@ -35,7 +35,7 @@ body {
   --code-keyword: #FF79C6;
   --code-string: #F1FA8C;
   --code-comment: #6272A4;
-  --kenyan-green: #34C759; /* Added for logo integration */
+  --kenyan-green: #34C759;
 }
 
 /* Utility Classes */
@@ -43,6 +43,14 @@ body {
   max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .px-4 {
@@ -89,6 +97,16 @@ body {
   margin-top: 0.5rem;
 }
 
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.md\:mr-4 {
+  @media (min-width: 768px) {
+    margin-right: 1rem;
+  }
+}
+
 .text-center {
   text-align: center;
 }
@@ -115,8 +133,20 @@ body {
   justify-content: center;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .gap-8 {
@@ -275,6 +305,10 @@ body {
   letter-spacing: -0.025em;
 }
 
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+
 .leading-relaxed {
   line-height: 1.625;
 }
@@ -398,20 +432,34 @@ nav {
   transition: all 0.3s ease;
 }
 
+nav > div {
+  flex: 0 1 auto; /* Prevent the div from taking too much space */
+}
+
 nav ul li a {
   font-weight: 500;
   font-size: 1.1rem;
+  color: var(--cyan);
+}
+
+nav h1 {
+  color: var(--offwhite);
+}
+
+/* Logo and Name Link Styling */
+nav a {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover {
+  transform: scale(1.05);
 }
 
 /* Logo Styling */
 nav img {
   transition: transform 0.3s ease;
 }
-
-nav img:hover {
-  transform: scale(1.05);
-}
-
 
 /* Hero Section */
 #home {
@@ -742,7 +790,7 @@ code.language-python .comment { color: var(--code-comment); }
 }
 
 .social-icons a {
-  font-size: 0.8rem; /* Reduced for better fit in row */
+  font-size: 0.8rem;
 }
 
 /* CV Buttons */
@@ -803,9 +851,9 @@ footer {
     height: 120px;
   }
 
-  /* Navigation adjustments for mobile */
   nav {
     padding: 0.5rem 1rem;
+    min-height: 60px; /* Ensure nav has enough height */
   }
 
   nav h1 {
@@ -819,14 +867,13 @@ footer {
   }
 
   .nav-links li {
-    list-style: none; /* Remove bullet points */
+    list-style: none;
   }
 
   .nav-links li a {
     font-size: 1rem;
   }
 
-  /* Contact section adjustments for mobile */
   #contact {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -855,13 +902,12 @@ footer {
   }
 
   .chat-bubble {
-    display: block; /* Show on mobile */
+    display: block;
   }
 
-  /* Center CV Buttons on Mobile with Adjusted Margin-Left */
   .cv-buttons {
     justify-content: center;
-    margin-left: 1rem; /* Shift the entire button group slightly to the right */
+    margin-left: 1rem;
   }
 }
 
@@ -879,20 +925,30 @@ footer {
 /* Increase spacing for larger screens (monitors) */
 @media (min-width: 778px) {
   .social-icons > * + * {
-      margin-left: 2rem; /* Equivalent to space-x-8 (8 x 0.25rem = 2rem) */
+    margin-left: 2rem;
   }
   .cv-buttons > * + * {
-      margin-left: 2rem;
+    margin-left: 2rem;
   }
 }
 
 /* Toggle Bar Styles */
 #nav-toggle {
   transition: all 0.3s ease;
+  z-index: 20;
+  padding: 0.5rem; /* Make the button easier to click */
 }
 
+/* Navigation Links */
 .nav-links {
   transition: all 0.3s ease;
+}
+
+/* Ensure nav-links are visible on desktop */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex !important; /* Override hidden */
+  }
 }
 
 @media (max-width: 768px) {
@@ -904,6 +960,7 @@ footer {
     background-color: var(--navy);
     border-top: 1px solid var(--gray-700);
     padding: 1rem;
+    z-index: 10;
   }
 
   .nav-links li a {
@@ -921,21 +978,4 @@ footer {
 /* Add Hidden Class for Toggle Functionality */
 .hidden {
   display: none;
-}
-/* Hover effect (pulse animation) */
-img[src*="logo"]:hover {
-  animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-  0% { opacity: 1; }
-  50% { opacity: 0.8; transform: scale(1.05); }
-  100% { opacity: 1; }
-}
-
-/* Dark mode adaptation (if SVG) */
-@media (prefers-color-scheme: dark) {
-  img[src*="logo"] {
-    filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 8px cyan);
-  }
 }
