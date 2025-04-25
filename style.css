@@ -936,7 +936,13 @@ footer {
 #nav-toggle {
   transition: all 0.3s ease;
   z-index: 20;
-  padding: 0.5rem; /* Make the button easier to click */
+  padding: 0.25rem; /* Reduced padding */
+  min-width: 32px; /* Ensure touch target size */
+  min-height: 32px; /* Ensure touch target size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 /* Navigation Links */
