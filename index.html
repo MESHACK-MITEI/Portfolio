@@ -184,18 +184,22 @@
         </div>
         <!-- Contact Form -->
         <div class="md:w-2/3 contact-form">
-          <form onsubmit="handleSubmit(event)" class="space-y-8">
+          <form action="https://formspree.io/f/xzzrzlvo" method="POST" onsubmit="handleSubmit(event)" class="space-y-8">
+            <input type="hidden" name="_next" value="/thank-you.html">
             <div>
-              <input type="text" id="name" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your name" required>
+              <input type="text" id="name" name="name" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your name" required>
             </div>
             <div>
-              <input type="email" id="email" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your email address" required>
+              <input type="email" id="email" name="email" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your email address" required>
             </div>
             <div>
-              <textarea id="message" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" rows="4" placeholder="Your Message" required></textarea>
+              <textarea id="message" name="message" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" rows="4" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" class="bg-cyan text-navy px-6 py-3 rounded-lg font-semibold hover:bg-cyan-dark transition-colors duration-200">Send Message</button>
+            <button type="submit" id="submit-button" class="bg-cyan text-navy px-6 py-3 rounded-lg font-semibold hover:bg-cyan-dark transition-colors duration-200">
+              Send Message
+            </button>
           </form>
+          
         </div>
       </div>
     </div>

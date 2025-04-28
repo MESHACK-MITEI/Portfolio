@@ -45,3 +45,51 @@ tabs.forEach(tab => {
         description.classList.toggle('active', !isActive);
     });
 });
+        // contact form
+document.addEventListener("DOMContentLoaded", function() {
+  const form = document.getElementById("contact-form");
+  const submitButton = form.querySelector("button[type='submit']");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const emailInput = document.getElementById("email");
+    const email = emailInput.value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      emailInput.focus();
+      return;
+    }
+
+    // Change button text to "Sending..." and disable it
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+    submitButton.classList.add("sending");
+
+    // Collect form data
+    const formData = new FormData(form);
+    formData.append("_next", "/thank-you.html"); // Add redirect URL
+
+    // Submit to Formspree via AJAX
+    fetch("https://formspree.io/f/unique-id", {
+      method: "POST",
+      body: formData,
+      headers: {
+        "Accept": "application/json"
+      }
+    }).then(response => {
+      if (response.ok) {
+        window.location.href = "/thank-you.html"; // Redirect on success
+      } else {
+        throw new Error("Form submission failed");
+      }
+    }).catch(error => {
+      alert("Failed to send message: " + error.message);
+      submitButton.textContent = "Send Message";
+      submitButton.disabled = false;
+      submitButton.classList.remove("sending");
+    });
+  });
+});

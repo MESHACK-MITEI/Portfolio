@@ -774,6 +774,15 @@ code.language-python .comment { color: var(--code-comment); }
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+#submit-button {
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+#submit-button.sending {
+  background-color: #6C757D; /* Change background color to indicate loading */
+  color: #fff;
+}
+
 
 /* Chat Bubble Styling */
 .chat-bubble {
