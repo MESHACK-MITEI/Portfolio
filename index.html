@@ -81,18 +81,47 @@
       <h2 class="text-4xl font-bold mb-10 text-center">My Background</h2>
       <div class="tab-container">
         <!-- Skills Tab -->
-        <div class="tab">
-          <h3 class="tab-title" tabindex="0">Skills</h3>
-          <div class="description">
-            <ul class="list-disc list-inside text-gray-300">
-              <li>Data Science & Analytics (Python, Pandas, Scikit-learn)</li>
-              <li>Web Development (HTML, CSS, JavaScript, PHP)</li>
-              <li>Database Management (SQL)</li>
-              <li>Data Visualization (Matplotlib, Seaborn)</li>
-              <li>Machine Learning (Regression, Clustering)</li>
-            </ul>
-          </div>
-        </div>
+       <!-- Skills Tab -->
+<div class="tab">
+  <h3 class="tab-title" tabindex="0">Skills</h3>
+  <div class="description">
+
+    <!-- Nested Tabs for Technical & Soft Skills -->
+    <div class="nested-tabs mt-4">
+      <div class="flex space-x-4 mb-4">
+        <button class="nested-tab-btn active" data-target="technical-skills">Technical Skills</button>
+        <button class="nested-tab-btn" data-target="soft-skills">Soft Skills</button>
+      </div>
+
+      <!-- Technical Skills -->
+      <div class="nested-tab-content" id="technical-skills">
+        <ul class="list-disc list-inside text-gray-300 space-y-1">
+          <li><strong>Programming & Data Analytics:</strong> Python, SQL, JavaScript, PHP</li>
+          <li><strong>Data Visualization:</strong> Tableau, Power BI</li>
+          <li><strong>Web Development:</strong> HTML, CSS, React.js, Tailwind CSS, Laravel</li>
+          <li><strong>Database Management:</strong> MySQL</li>
+          <li><strong>Networking:</strong> Cisco switch and router configuration</li>
+          <li><strong>Operating Systems:</strong> Windows and Linux</li>
+          <li><strong>Office Tools:</strong> Microsoft Word, Excel, PowerPoint</li>
+        </ul>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="nested-tab-content hidden" id="soft-skills">
+        <ul class="list-disc list-inside text-gray-300 space-y-1">
+          <li>Clear and professional communication</li>
+          <li>Critical thinking and structured problem-solving</li>
+          <li>Teamwork and agile collaboration using tools like Slack and Trello</li>
+          <li>Managing time and meeting tight deadlines in remote environments</li>
+          <li>Professionalism, personal branding, and ethical responsibility</li>
+          <li>Flexibility and the ability to adapt to new challenges quickly</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
         <!-- Experience Tab -->
         <div class="tab">
           <h3 class="tab-title" tabindex="0">Experience</h3>
@@ -120,42 +149,62 @@
 
   <!-- Projects Section -->
   <section id="projects" class="py-20 bg-navy">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-10 text-center">My Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1: Online Voting System -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="image-container">
-            <img src="images/vote.png" alt="Online Voting System" class="w-auto h-48 object-contain mx-auto">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Online Voting System</h3>
-            <p class="text-gray-300 mt-2">Built a secure web-based voting platform for civic engagement using HTML, CSS, JavaScript, PHP, and SQL. Features include user authentication, vote tracking, and real-time results.</p>
-            <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
-          </div>
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-10 text-center text-white">My Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Project 1: Online Voting System -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <div class="image-container">
+          <img src="images/vote.png" alt="Online Voting System" class="w-auto h-48 object-contain mx-auto">
         </div>
-        <!-- Project 2: Housing Pricing Prediction Model -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="image-container">
-            <img src="images/model.png" alt="Housing Pricing Prediction Model" class="w-auto h-48 object-contain mx-auto">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Housing Price Prediction</h3>
-            <p class="text-gray-300 mt-2">Developed a machine learning model to predict housing prices using Python (Pandas, Scikit-learn). Applied regression techniques and visualized trends with Matplotlib.</p>
-            <a href="https://github.com/MESHACK-MITEI/My-H.P.P-Notebook/blob/main/projectML.ipynb" class="text-cyan hover:underline mt-4 inline-block">View Notebook</a>
-          </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Online Voting System</h3>
+          <p class="text-gray-300 mt-2">
+            <strong>Purpose:</strong> To streamline the election process by providing a secure and accessible digital voting platform for students and civic users.<br>
+            <strong>Challenges:</strong> Ensuring vote integrity, preventing duplicate votes, and implementing secure login authentication.<br>
+            <strong>Solution:</strong> Built with HTML, CSS, JavaScript, PHP, and SQL, the system includes role-based access, real-time vote tallying, and secure database handling.
+          </p>
+          <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
         </div>
-        <!-- Project 3: Sales Insight Dashboard -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-          <div class="image-container">
-            <img src="images/dashboard.png" alt="Sales Insight Dashboard" class="w-auto h-48 object-contain mx-auto">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Sales Insight Dashboard</h3>
-            <p class="text-gray-300 mt-2">Built an interactive Power BI dashboard to track and analyze sales performance across regions and time. Features include KPIs, trend analysis, and category breakdowns for business decision support.</p>
-            <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
-          </div>
+      </div>
+
+      <!-- Project 2: Housing Price Prediction -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <div class="image-container">
+          <img src="images/model.png" alt="Housing Pricing Prediction Model" class="w-auto h-48 object-contain mx-auto">
         </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Housing Price Prediction</h3>
+          <p class="text-gray-300 mt-2">
+            <strong>Purpose:</strong> To assist real estate stakeholders in predicting housing prices using historical data and machine learning.<br>
+            <strong>Challenges:</strong> Handling missing data, feature selection, and model evaluation to ensure accuracy.<br>
+            <strong>Solution:</strong> Leveraged Python with Pandas and Scikit-learn to build regression models, supported by data visualizations using Matplotlib.
+          </p>
+          <a href="https://github.com/MESHACK-MITEI/My-H.P.P-Notebook/blob/main/projectML.ipynb" class="text-cyan hover:underline mt-4 inline-block">View Notebook</a>
+        </div>
+      </div>
+
+      <!-- Project 3: Sales Insight Dashboard -->
+      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+        <div class="image-container">
+          <img src="images/dashboard.png" alt="Sales Insight Dashboard" class="w-auto h-48 object-contain mx-auto">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white">Sales Insight Dashboard</h3>
+          <p class="text-gray-300 mt-2">
+            <strong>Purpose:</strong> To help sales teams and managers monitor performance and make data-driven decisions.<br>
+            <strong>Challenges:</strong> Integrating large datasets, ensuring report interactivity, and presenting insights clearly.<br>
+            <strong>Solution:</strong> Created an interactive dashboard using Power BI featuring KPIs, regional trends, time-series charts, and category-wise breakdowns.
+          </p>
+          <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
       </div>
     </div>
   </section>
@@ -184,12 +233,19 @@
         <div class="p-6">
           <h3 class="text-xl font-semibold text-white dark:text-gray-800">Testimonial 1</h3>
           <p class="text-gray-300 dark:text-gray-600 mt-2">
-            "Meshack's work on our data analytics project was exceptional, delivering actionable insights with precision." - Client Name, Company
-          </p>
+           </p>
           <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read Full Testimonial</a>
         </div>
       </div>
       <!-- Add more testimonial cards as needed -->
+       <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-white dark:text-gray-800">Testimonial 2</h3>
+          <p class="text-gray-300 dark:text-gray-600 mt-2">
+           </p>
+          <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read Full Testimonial</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -221,8 +277,8 @@
               <a href="images/Meshack_Mitei_CV.pdf" target="_blank" class="bg-cyan text-navy px-4 py-2 rounded-full hover:bg-cyan transition-colors duration-200 text-center">View CV</a>
             </div>
             <div class="cv-buttons space-x-4 mt-4">
-              <a href="images/Meshack_Mitei_CV.pdf" target="_blank" class="interactive-btn">View CV</a>
-              <a href="images/Meshack_Mitei_CV.pdf" download class="interactive-btn">Download CV</a>
+              <a href="images/CV.pdf" target="_blank" class="interactive-btn">View CV</a>
+              <a href="images/CV.pdf" download class="interactive-btn">Download CV</a>
             </div>
           </div>
         </div>

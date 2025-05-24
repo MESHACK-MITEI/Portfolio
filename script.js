@@ -93,3 +93,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+/*skills*/
+
+  // Nested tabs logic
+  const nestedTabBtns = document.querySelectorAll(".nested-tab-btn");
+  const nestedContents = document.querySelectorAll(".nested-tab-content");
+
+  nestedTabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      nestedTabBtns.forEach(b => b.classList.remove("active"));
+      nestedContents.forEach(c => c.classList.add("hidden"));
+      btn.classList.add("active");
+      const target = btn.getAttribute("data-target");
+      document.getElementById(target).classList.remove("hidden");
+    });
+  });
+
+  // Ensure default skills content is visible when Skills tab is clicked
+  const skillsTabTitle = document.querySelector("#skills-tab .tab-title");
+  skillsTabTitle.addEventListener("click", () => {
+    // Trigger Technical Skills by default
+    const defaultBtn = document.querySelector('.nested-tab-btn[data-target="technical-skills"]');
+    if (defaultBtn) defaultBtn.click();
+  });
+
+  // Optional: If keyboard is used (via tabindex), include focus/enter too
+  skillsTabTitle.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      const defaultBtn = document.querySelector('.nested-tab-btn[data-target="technical-skills"]');
+      if (defaultBtn) defaultBtn.click();
+    }
+  });
+
