@@ -32,6 +32,7 @@
       <li><a href="#about" class="hover:text-cyan">About</a></li>
       <li><a href="#skills-experience" class="hover:text-cyan">Skills & Experience</a></li>
       <li><a href="#projects" class="hover:text-cyan">Projects</a></li>
+      <li><a href="#elevator-pitch" class="hover:text-cyan">Elevator Pitch</a></li>
       <li><a href="#contact" class="hover:text-cyan">Contact</a></li>
     </ul>
   </nav>
@@ -42,15 +43,15 @@
       <div class="profile-image-container">
         <div class="hexagon">
           <img 
-          src="images/bg.png" 
-          alt="Profile picture of Meshack Kipkosgei Mitei" 
-          class="hexagon-image">        
+            src="images/bg.png" 
+            alt="Profile picture of Meshack Kipkosgei Mitei" 
+            class="hexagon-image">        
         </div>
         <div class="hexagon-glow"></div>
       </div>
       <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight animate-fade-in">Hi, I'm Meshack Kipkosgei Mitei</h1>
       <p class="text-xl md:text-2xl mb-6 text-gray-300">Data Analyst | Driving Impact Through Data & Technology</p>
-      <a href="#projects" class="bg-cyan text-navy px-6 py-3 rounded-full font-semibold hover:bg-cyan-dark transition-colors duration-200">Explore My Work</a>
+      <a href="#projects" class="bg-cyan text-navy px-6 py-3 rounded-full font-semibold hover:bg-cyan transition-colors duration-200">Explore My Work</a>
     </div>
   </section>
 
@@ -68,7 +69,6 @@
             driven solutions, and my goal is to grow into a data science role where I can create meaningful impact.
             I'm especially motivated to apply data science in fields like agriculture, healthcare, 
             and education to help solve real-world challenges and improve lives across Africa. 
-
           </p>
         </div>
       </div>
@@ -98,7 +98,7 @@
           <h3 class="tab-title" tabindex="0">Experience</h3>
           <div class="description">
             <ul class="list-disc list-inside text-gray-300">
-              <li>IT Assistant (2024 - Present): Provided technical support, including  managing network configurations.</li>
+              <li>IT Assistant (2024 - Present): Provided technical support, including managing network configurations.</li>
               <li>ALX Africa Data Analytics Program (2024): Completed capstone project on data-driven decision-making, focusing on predictive analytics.</li>
               <li>Freelance Projects: Developed an Online Voting System and Housing Price Prediction Model, applying web development and machine learning skills.</li>
             </ul>
@@ -124,8 +124,10 @@
       <h2 class="text-4xl font-bold mb-10 text-center">My Projects</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1: Online Voting System -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-           <img src="images/vote.png" alt="Online Voting System"  class="w-auto h-48 object-contain mx-auto custom-radius">
+        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="image-container">
+            <img src="images/vote.png" alt="Online Voting System" class="w-auto h-48 object-contain mx-auto">
+          </div>
           <div class="p-6">
             <h3 class="text-xl font-semibold">Online Voting System</h3>
             <p class="text-gray-300 mt-2">Built a secure web-based voting platform for civic engagement using HTML, CSS, JavaScript, PHP, and SQL. Features include user authentication, vote tracking, and real-time results.</p>
@@ -133,21 +135,24 @@
           </div>
         </div>
         <!-- Project 2: Housing Pricing Prediction Model -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-           <img src="images/model.png" alt="Housing Pricing Prediction Model" class="w-auto h-48 object-contain mx-auto custom-radius">
-           <div class="p-6">
+        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="image-container">
+            <img src="images/model.png" alt="Housing Pricing Prediction Model" class="w-auto h-48 object-contain mx-auto">
+          </div>
+          <div class="p-6">
             <h3 class="text-xl font-semibold">Housing Price Prediction</h3>
             <p class="text-gray-300 mt-2">Developed a machine learning model to predict housing prices using Python (Pandas, Scikit-learn). Applied regression techniques and visualized trends with Matplotlib.</p>
             <a href="https://github.com/MESHACK-MITEI/My-H.P.P-Notebook/blob/main/projectML.ipynb" class="text-cyan hover:underline mt-4 inline-block">View Notebook</a>
           </div>
         </div>
-        <!-- Project 3: Maternal Healthcare Visualization -->
-        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-           <img src="images/dashboard.png" alt="Sales Insight Dashboard" class="w-auto h-48 object-contain mx-auto custom-radius">
-           <div class="p-6">
+        <!-- Project 3: Sales Insight Dashboard -->
+        <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="image-container">
+            <img src="images/dashboard.png" alt="Sales Insight Dashboard" class="w-auto h-48 object-contain mx-auto">
+          </div>
+          <div class="p-6">
             <h3 class="text-xl font-semibold">Sales Insight Dashboard</h3>
-            <p class="text-gray-300 mt-2">Built an interactive Power BI dashboard to track and analyze sales performance across regions and time.
-              Features include KPIs, trend analysis, and category breakdowns for business decision support.</p>
+            <p class="text-gray-300 mt-2">Built an interactive Power BI dashboard to track and analyze sales performance across regions and time. Features include KPIs, trend analysis, and category breakdowns for business decision support.</p>
             <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
           </div>
         </div>
@@ -156,38 +161,55 @@
   </section>
 
   <!-- Elevator Pitch and Testimonials Section -->
-<section id="elevator-pitch" class="py-20 bg-gray-900 dark:bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-10 text-center text-white dark:text-gray-800">Elevator Pitch & Testimonials</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Elevator Pitch Card -->
-      <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <video class="w-full h-48 object-cover mx-auto rounded-t-xl" controls poster="images/elevator-poster.jpg">
-          <source src="images/Elavator.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white dark:text-gray-800">My Elevator Pitch</h3>
-          <p class="text-gray-300 dark:text-gray-600 mt-2">
-            A concise pitch showcasing my expertise in data science and IT, highlighting key projects like predictive models and web applications to drive impact through technology.
-          </p>
-            <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
+  <section id="elevator-pitch" class="py-20 bg-navy">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-10 text-center text-offwhite">Elevator Pitch & Testimonials</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Elevator Pitch Card -->
+        <div class="elevator-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="media-container">
+            <video class="w-full h-48 object-cover mx-auto" controls poster="images/elevator-poster.jpg">
+              <source src="images/Elevator.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-offwhite">My Elevator Pitch</h3>
+            <p class="text-gray-300 mt-2">
+              A concise pitch showcasing my expertise in data science and IT, highlighting key projects like predictive models and web applications to drive impact through technology.
+            </p>
+            <a href="#" class="text-cyan hover:underline mt-4 inline-block" aria-label="Learn more about Meshack's elevator pitch">Learn More</a>
+          </div>
+        </div>
+        <!-- Testimonial Card 1 -->
+        <div class="elevator-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="media-container">
+            <img src="images/testimonial1.jpg" alt="Testimonial from Client Name" class="w-auto h-48 object-contain mx-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-offwhite">Testimonial 1</h3>
+            <p class="text-gray-300 mt-2">
+              "Meshack's work on our data analytics project was exceptional, delivering actionable insights with precision." - Client Name, Company
+            </p>
+            <a href="#" class="text-cyan hover:underline mt-4 inline-block" aria-label="Read full testimonial from Client Name">Read Full Testimonial</a>
+          </div>
+        </div>
+        <!-- Testimonial Card 2 -->
+        <div class="elevator-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+          <div class="media-container">
+            <img src="images/testimonial2.jpg" alt="Testimonial from Supervisor Name" class="w-auto h-48 object-contain mx-auto">
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-offwhite">Testimonial 2</h3>
+            <p class="text-gray-300 mt-2">
+              "Meshack's ability to combine technical skills with business acumen made our project a success." - Supervisor Name, Organization
+            </p>
+            <a href="#" class="text-cyan hover:underline mt-4 inline-block" aria-label="Read full testimonial from Supervisor Name">Read Full Testimonial</a>
+          </div>
         </div>
       </div>
-      <!-- Placeholder for Testimonials (Add more cards as needed) -->
-      <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white dark:text-gray-800">Testimonial 1</h3>
-          <p class="text-gray-300 dark:text-gray-600 mt-2">
-            "Meshack's work on our data analytics project was exceptional, delivering actionable insights with precision." - Client Name, Company
-          </p>
-            <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
-        </div>
-      </div>
-      <!-- Add more testimonial cards as needed -->
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="py-20 bg-navy text-offwhite">
@@ -207,17 +229,17 @@
           <div class="flex flex-col space-y-4 mb-8 social-icons">
             <a href="https://www.facebook.com/mesh.ocil" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-facebook-f text-xl"></i></a>
             <a href="https://x.com/MeshackKip4439?t=bkn42qVDqGjGelSACY7x0A&s=09" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-twitter text-xl"></i></a>
-            <a href="https://www.instagram.com/mkmitei?igsh=YzljYTk1ODg3Zg== " class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="https://www.instagram.com/mkmitei?igsh=YzljYTk1ODg3Zg==" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-instagram text-xl"></i></a>
             <a href="https://wa.me/254708128761" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-whatsapp text-xl"></i></a>
-            <a href="linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-linkedin-in text-xl"></i></a>
+            <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-linkedin-in text-xl"></i></a>
           </div>
           <div class="relative">
             <div class="chat-bubble">
-              <a href="images/Meshack_Mitei_CV.pdf.pdf" target="_blank" class="bg-cyan text-navy px-4 py-2 rounded-full hover:bg-cyan-dark transition-colors duration-200 text-center">View CV</a>
+              <a href="images/Meshack_Mitei_CV.pdf" target="_blank" class="bg-cyan text-navy px-4 py-2 rounded-full hover:bg-cyan transition-colors duration-200 text-center">View CV</a>
             </div>
             <div class="cv-buttons space-x-4 mt-4">
-              <a href="images/Mshack_Mitei_CV.pdf.pdf" target="_blank" class="interactive-btn">View CV</a>
-              <a href="images/Mshack_Mitei_CV.pdf.pdf" download class="interactive-btn">Download CV</a>
+              <a href="images/Meshack_Mitei_CV.pdf" target="_blank" class="interactive-btn">View CV</a>
+              <a href="images/Meshack_Mitei_CV.pdf" download class="interactive-btn">Download CV</a>
             </div>
           </div>
         </div>
@@ -234,11 +256,10 @@
             <div>
               <textarea id="message" name="message" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" rows="4" placeholder="Your Message" required></textarea>
             </div>
-            <button type="submit" id="submit-button" class="bg-cyan text-navy px-6 py-3 rounded-lg font-semibold hover:bg-cyan-dark transition-colors duration-200">
+            <button type="submit" id="submit-button" class="bg-cyan text-navy px-6 py-3 rounded-lg font-semibold hover:bg-cyan transition-colors duration-200">
               Send Message
             </button>
           </form>
-          
         </div>
       </div>
     </div>
@@ -249,7 +270,7 @@
     <div class="max-w-7xl mx-auto px-4 text-center">
       <p class="text-gray-300">© 2025 Meshack Kipkosgei Mitei. All rights reserved.</p>
       <div class="flex justify-center space-x-6 mt-4">
-        <a href="linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200">LinkedIn</a>
+        <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200">LinkedIn</a>
         <a href="https://github.com/MESHACK-MITEI" class="text-gray-300 hover:text-cyan transition-colors duration-200">GitHub</a>
         <a href="https://x.com/MeshackKip4439?t=bkn42qVDqGjGelSACY7x0A&s=09" class="text-gray-300 hover:text-cyan transition-colors duration-200">X</a>
       </div>

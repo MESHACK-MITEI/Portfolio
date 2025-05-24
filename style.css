@@ -23,9 +23,8 @@ body {
 /* Custom Color Variables */
 :root {
   --navy: #1A202C;
-  --cyan: #00D4FF;
-  --cyan-dark: #00A3CC;
-  --gray-800: #2D3748;
+  --cyan: #0D9488; /* Updated to match user request */
+  --gray-800: #1F2937; /* Dark mode card background */
   --gray-700: #4A5568;
   --gray-300: #CBD5E0;
   --offwhite: #F7FAFC;
@@ -36,6 +35,11 @@ body {
   --code-string: #F1FA8C;
   --code-comment: #6272A4;
   --kenyan-green: #34C759;
+}
+
+.dark {
+  --gray-800: #E5E7EB; /* Light mode card background */
+  --cyan: #0D9488; /* Same teal color for consistency */
 }
 
 /* Utility Classes */
@@ -341,12 +345,12 @@ body {
   background-color: var(--cyan);
 }
 
-.hover\:bg-cyan-dark:hover {
-  background-color: var(--cyan-dark);
+.hover\:bg-cyan:hover {
+  background-color: var(--cyan); /* Replaced --cyan-dark with --cyan */
 }
 
-.hover\:text-cyan-dark:hover {
-  color: var(--cyan-dark);
+.hover\:text-cyan:hover {
+  color: var(--cyan); /* Replaced --cyan-dark with --cyan */
 }
 
 .border {
@@ -372,6 +376,7 @@ body {
 .custom-radius {
   border-radius: 5px;
 }
+
 .custom-radius2 {
   border-radius: 5px;
 }
@@ -444,25 +449,24 @@ nav {
 }
 
 nav > div {
-  flex: 0 1 auto; /* Prevent the div from taking too much space */
+  flex: 0 1 auto;
 }
 
 nav ul li a {
   font-weight: 500;
   color: var(--cyan);
   font-size: 1.1rem;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease;
 }
 
 nav ul li a.active {
-  color: #ffffff; /* White on click */
+  color: #ffffff;
 }
 
 nav h1 {
   color: var(--offwhite);
 }
 
-/* Logo and Name Link Styling */
 nav a {
   text-decoration: none;
   transition: transform 0.3s ease;
@@ -472,7 +476,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-/* Logo Styling */
 nav img {
   transition: transform 0.3s ease;
 }
@@ -488,7 +491,7 @@ nav img {
 }
 
 .hero-container {
-  background-color: rgba(255, 255, 905, 0.05);
+  background-color: rgba(255, 255, 255, 0.05); /* Fixed typo: 905 to 255 */
   border-radius: 1rem;
   padding: 3rem;
   backdrop-filter: blur(10px);
@@ -660,6 +663,7 @@ nav img {
   background-color: var(--gray-800);
   margin-top: 0.5rem;
 }
+
 .project-card:hover .image-container {
   background-color: var(--cyan);
 }
@@ -681,20 +685,30 @@ nav img {
   filter: brightness(1.1);
 }
 
+.project-card a {
+  color: var(--cyan);
+  transition: all 0.3s ease;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+  color: var(--cyan); /* Replaced --cyan-dark with --cyan */
+}
+
 /* Elevator Pitch and Testimonials Section */
 #elevator-pitch {
-  padding: 5rem 0; /* Matches #projects padding */
+  padding: 5rem 0;
 }
 
 .elevator-card {
   position: relative;
-  transition: all 0.3s ease; /* Matches project-card transition */
+  transition: all 0.3s ease;
 }
 
 .elevator-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Matches project-card hover shadow */
-  transform: scale(1.05); /* Matches project-card hover scale */
-  color: var(--cyan); /* Matches project-card hover color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  color: var(--cyan);
 }
 
 .elevator-card .media-container {
@@ -702,11 +716,11 @@ nav img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 13.5rem; /* Matches project-card image-container height */
-  padding-top: 1rem; /* Matches project-card image-container padding */
-  background-color: var(--gray-800); /* Matches project-card background */
+  height: 13.5rem;
+  padding-top: 1rem;
+  background-color: var(--gray-800);
   position: relative;
-  overflow: hidden; /* Ensures video/poster stays within bounds */
+  overflow: hidden;
 }
 
 .elevator-card video,
@@ -714,16 +728,16 @@ nav img {
   display: block;
   width: auto;
   max-width: 100%;
-  height: 12rem; /* Matches project-card img height */
-  object-fit: contain; /* Matches project-card img object-fit */
-  object-position: center; /* Matches project-card img object-position */
-  transition: transform 0.3s ease; /* Matches project-card img transition */
-  background-color: var(--gray-800); /* Matches project-card img background */
-  margin-top: 0.5rem; /* Matches project-card img margin */
+  height: 12rem;
+  object-fit: contain;
+  object-position: center;
+  transition: transform 0.3s ease;
+  background-color: var(--gray-800);
+  margin-top: 0.5rem;
 }
 
 .elevator-card:hover .media-container {
-  background-color: var(--cyan); /* Matches project-card image-container hover */
+  background-color: var(--cyan);
 }
 
 .elevator-card::before {
@@ -732,55 +746,26 @@ nav img {
   top: 0;
   left: 0;
   width: 100%;
-  height: 13.5rem; /* Matches project-card gradient height */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); /* Matches project-card gradient */
+  height: 13.5rem;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent);
   pointer-events: none;
   z-index: 1;
 }
 
 .elevator-card:hover video,
 .elevator-card:hover img {
-  transform: scale(1.1); /* Matches project-card img hover scale */
-  filter: brightness(1.1); /* Matches project-card img hover brightness */
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
-/* Dark/Light Mode Variables */
-:root {
-  --gray-800: #1F2937; /* Dark mode card background */
-  --cyan: #0D9488; /* Teal/cyan accent for consistency */
+.elevator-card a {
+  color: var(--cyan);
+  transition: all 0.3s ease;
 }
 
-.dark {
-  --gray-800: #E5E7EB; /* Light mode card background */
-  --cyan: #0D9488; /* Same accent color for consistency */
-}
-
-@media (max-width: 768px) {
-  .image-container {
-    height: 11.5rem;
-    padding-top: 1rem;
-  }
-  .project-card img {
-    height: 10rem;
-    margin-top: 0.5rem;
-  }
-  .project-card::before {
-    height: 11.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .image-container {
-    height: 15.5rem;
-    padding-top: 1rem;
-  }
-  .project-card img {
-    height: 14rem;
-    margin-top: 0.5rem;
-  }
-  .project-card::before {
-    height: 15.5rem;
-  }
+.elevator-card a:hover {
+  text-decoration: underline;
+  color: var(--cyan); /* Replaced --cyan-dark with --cyan */
 }
 
 /* Code Block Styling */
@@ -827,7 +812,7 @@ code.language-python .comment { color: var(--code-comment); }
 #contact input:focus,
 #contact textarea:focus {
   border-color: var(--cyan);
-  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2); /* Updated to use --cyan (#0D9488) */
 }
 
 #contact button {
@@ -848,28 +833,28 @@ code.language-python .comment { color: var(--code-comment); }
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 #submit-button {
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 #submit-button.sending {
-  background-color: #6C757D; /* Change background color to indicate loading */
+  background-color: #6C757D;
   color: #fff;
 }
-
 
 /* Chat Bubble Styling */
 .chat-bubble {
   position: absolute;
   left: -80px;
   bottom: 100px;
-  display: none; /* Hidden by default on desktop */
+  display: none;
 }
 
 .chat-bubble a {
   font-size: 0.7rem;
   padding: 0.5rem 1rem;
-  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.3); /* Updated to use --cyan (#0D9488) */
   position: relative;
 }
 
@@ -897,14 +882,13 @@ code.language-python .comment { color: var(--code-comment); }
   font-weight: 600;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4), 0 0 20px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.4), 0 0 20px rgba(13, 148, 136, 0.2); /* Updated to use --cyan (#0D9488) */
   overflow: hidden;
   min-height: 44px;
   width: 100%;
   max-width: 100px;
 }
 
-/* Reflection Effect */
 .interactive-btn::after {
   content: '';
   position: absolute;
@@ -912,21 +896,19 @@ code.language-python .comment { color: var(--code-comment); }
   left: 0;
   width: 100%;
   height: 10px;
-  background: linear-gradient(to bottom, rgba(0, 212, 255, 0.2), transparent);
+  background: linear-gradient(to bottom, rgba(13, 148, 136, 0.2), transparent); /* Updated to use --cyan (#0D9488) */
   border-radius: 0 0 0.5rem 0.5rem;
   opacity: 0.8;
 }
 
-/* Hover and Tap Effects */
 .interactive-btn:hover,
 .interactive-btn:focus,
 .interactive-btn.active {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6), 0 0 30px rgba(0, 212, 255, 0.3);
-  background: var(--cyan-dark);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.6), 0 0 30px rgba(13, 148, 136, 0.3); /* Updated to use --cyan (#0D9488) */
+  background: var(--cyan);
 }
 
-/* Shine Effect on Hover/Tap */
 .interactive-btn::before {
   content: '';
   position: absolute;
@@ -985,6 +967,35 @@ footer {
     max-width: 100%;
   }
 
+  .image-container {
+    height: 11.5rem;
+    padding-top: 1rem;
+  }
+
+  .project-card img {
+    height: 10rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-card::before {
+    height: 11.5rem;
+  }
+
+  .elevator-card .media-container {
+    height: 11.5rem;
+    padding-top: 1rem;
+  }
+
+  .elevator-card video,
+  .elevator-card img {
+    height: 10rem;
+    margin-top: 0.5rem;
+  }
+
+  .elevator-card::before {
+    height: 11.5rem;
+  }
+
   #home h1 {
     font-size: 2rem;
   }
@@ -1017,7 +1028,7 @@ footer {
 
   nav {
     padding: 0.5rem 1rem;
-    min-height: 60px; /* Ensure nav has enough height */
+    min-height: 60px;
   }
 
   nav h1 {
@@ -1075,6 +1086,37 @@ footer {
   }
 }
 
+@media (min-width: 1024px) {
+  .image-container {
+    height: 15.5rem;
+    padding-top: 1rem;
+  }
+
+  .project-card img {
+    height: 14rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-card::before {
+    height: 15.5rem;
+  }
+
+  .elevator-card .media-container {
+    height: 15.5rem;
+    padding-top: 1rem;
+  }
+
+  .elevator-card video,
+  .elevator-card img {
+    height: 14rem;
+    margin-top: 0.5rem;
+  }
+
+  .elevator-card::before {
+    height: 15.5rem;
+  }
+}
+
 @media (max-width: 640px) {
   nav ul {
     flex-direction: column;
@@ -1084,9 +1126,12 @@ footer {
   .project-card {
     margin: 0 auto;
   }
+
+  .elevator-card {
+    margin: 0 auto;
+  }
 }
 
-/* Increase spacing for larger screens (monitors) */
 @media (min-width: 778px) {
   .social-icons > * + * {
     margin-left: 2rem;
@@ -1100,9 +1145,9 @@ footer {
 #nav-toggle {
   transition: all 0.3s ease;
   z-index: 20;
-  padding: 0.25rem; /* Reduced padding */
-  min-width: 32px; /* Ensure touch target size */
-  min-height: 32px; /* Ensure touch target size */
+  padding: 0.25rem;
+  min-width: 32px;
+  min-height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1113,10 +1158,9 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Ensure nav-links are visible on desktop */
 @media (min-width: 768px) {
   .nav-links {
-    display: flex !important; /* Override hidden */
+    display: flex !important;
   }
 }
 
