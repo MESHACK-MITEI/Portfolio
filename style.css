@@ -39,7 +39,7 @@ body {
 
 .dark {
   --gray-800: #E5E7EB; /* Light mode card background */
-  --cyan: #0D9488; /* Same teal color for consistency */
+  --cyan: #0bf3df; /* Same teal color for consistency */
 }
 
 /* Utility Classes */
@@ -905,7 +905,7 @@ code.language-python .comment { color: var(--code-comment); }
 .interactive-btn:focus,
 .interactive-btn.active {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.6), 0 0 30px rgba(13, 148, 136, 0.3); /* Updated to use --cyan (#0D9488) */
+  box-shadow: 0 6px 20px --cyan(5, 234, 215, 0.6), 0 0 30px rgba(13, 148, 136, 0.3); /* Updated to use --cyan (#0D9488) */
   background: var(--cyan);
 }
 
