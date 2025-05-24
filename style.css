@@ -681,6 +681,80 @@ nav img {
   filter: brightness(1.1);
 }
 
+/* Elevator Pitch and Testimonials Section */
+#elevator-pitch {
+  padding: 5rem 0; /* Matches #projects padding */
+}
+
+.elevator-card {
+  position: relative;
+  transition: all 0.3s ease; /* Matches project-card transition */
+}
+
+.elevator-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Matches project-card hover shadow */
+  transform: scale(1.05); /* Matches project-card hover scale */
+  color: var(--cyan); /* Matches project-card hover color */
+}
+
+.elevator-card .media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 13.5rem; /* Matches project-card image-container height */
+  padding-top: 1rem; /* Matches project-card image-container padding */
+  background-color: var(--gray-800); /* Matches project-card background */
+  position: relative;
+  overflow: hidden; /* Ensures video/poster stays within bounds */
+}
+
+.elevator-card video,
+.elevator-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 12rem; /* Matches project-card img height */
+  object-fit: contain; /* Matches project-card img object-fit */
+  object-position: center; /* Matches project-card img object-position */
+  transition: transform 0.3s ease; /* Matches project-card img transition */
+  background-color: var(--gray-800); /* Matches project-card img background */
+  margin-top: 0.5rem; /* Matches project-card img margin */
+}
+
+.elevator-card:hover .media-container {
+  background-color: var(--cyan); /* Matches project-card image-container hover */
+}
+
+.elevator-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 13.5rem; /* Matches project-card gradient height */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), transparent); /* Matches project-card gradient */
+  pointer-events: none;
+  z-index: 1;
+}
+
+.elevator-card:hover video,
+.elevator-card:hover img {
+  transform: scale(1.1); /* Matches project-card img hover scale */
+  filter: brightness(1.1); /* Matches project-card img hover brightness */
+}
+
+/* Dark/Light Mode Variables */
+:root {
+  --gray-800: #1F2937; /* Dark mode card background */
+  --cyan: #0D9488; /* Teal/cyan accent for consistency */
+}
+
+.dark {
+  --gray-800: #E5E7EB; /* Light mode card background */
+  --cyan: #0D9488; /* Same accent color for consistency */
+}
+
 @media (max-width: 768px) {
   .image-container {
     height: 11.5rem;
