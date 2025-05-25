@@ -219,31 +219,43 @@
  <!-- Elevator Pitch and Testimonials Section -->
 <section id="elevator-pitch" class="py-20 bg-gray-900 dark:bg-gray-50">
   <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-10 text-center text-white dark:text-gray-800">Elevator Pitch & Testimonials</h2>
+    <h2 class="text-4xl font-bold mb-10 text-center text-white dark:text-gray-800">Elevator Pitch Hobbies & Testimonials</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Elevator Pitch Card -->
-      <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <video class="w-full h-48 object-cover mx-auto rounded-t-xl" controls poster="images/elevator-poster.jpg">
-          <source src="images/Elavator.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white dark:text-gray-800">My Elevator Pitch</h3>
-          <p class="text-gray-300 dark:text-gray-600 mt-2">
-            A concise pitch showcasing my expertise in data science and IT, highlighting key projects like predictive models and web applications to drive impact through technology.
-          </p>
-          <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Learn More</a>
-        </div>
-      </div>
+<!-- Elevator Pitch Card -->
+<div class="elevator-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+  <div class="media-container">
+    <video class="w-full h-auto max-h-48 object-contain mx-auto" controls poster="images/elevator-poster.jpg" loading="lazy">
+      <source src="images/ELv.mp4" type="video/mp4">
+      <source src="images/Elevator.webm" type="video/webm">
+      <track src="captions/elevator-captions.vtt" kind="subtitles" srclang="en" label="English" default>
+      Your browser does not support the video tag. Please <a href="https://your-video-link.com" class="text-cyan hover:underline">watch the pitch here</a> or contact me for details.
+    </video>
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-offwhite">My Elevator Pitch</h3>
+    <p class="text-gray-300 mt-2">
+      A concise pitch highlighting my expertise in SQL, Python, and Tableau, with a focus on delivering data-driven solutions for sustainability in healthcare and agriculture.
+    </p>
+    <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-cyan hover:underline mt-4 inline-block" aria-label="Connect with Meshack on LinkedIn">Connect with Me</a>
+  </div>
+</div>
+
+
       <!-- Placeholder for Testimonials (Add more cards as needed) -->
       <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white dark:text-gray-800">Testimonial 1</h3>
-          <p class="text-gray-300 dark:text-gray-600 mt-2">
-           </p>
-          <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read Full Testimonial</a>
-        </div>
-      </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold text-white dark:text-gray-800">Hobbies</h3>
+    <ul class="list-disc list-inside text-gray-300 dark:text-gray-600 mt-2 space-y-1">
+      <li>Playing football</li>
+      <li>Watching documentaries</li>
+      <li>Spending time in nature</li>
+      <li>Reading inspirational books</li>
+    </ul>
+    <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read More About Me</a>
+  </div>
+</div>
+
       <!-- Add more testimonial cards as needed -->
        <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
         <div class="p-6">

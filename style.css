@@ -791,7 +791,49 @@ nav img {
   text-decoration: underline;
   color: var(--cyan); /* Replaced --cyan-dark with --cyan */
 }
+.elevator-card .media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 13.5rem; /* Changed from fixed height to min-height */
+  padding: 1rem 0; /* Adjusted padding for flexibility */
+  background-color: var(--gray-800);
+  position: relative;
+  overflow: visible; /* Prevent clipping */
+}
 
+.elevator-card video {
+  display: block;
+  width: 100%; /* Full width of container */
+  max-width: 100%;
+  height: auto; /* Allow natural height */
+  max-height: 12rem; /* Cap height to prevent overflow */
+  object-fit: contain; /* Preserve aspect ratio */
+  object-position: center;
+  transition: transform 0.3s ease;
+  background-color: var(--gray-800);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .elevator-card .media-container {
+    min-height: 11.5rem; /* Adjusted for mobile */
+    padding: 0.75rem 0;
+  }
+  .elevator-card video {
+    max-height: 10rem; /* Cap height for mobile */
+  }
+}
+
+@media (min-width: 1024px) {
+  .elevator-card .media-container {
+    min-height: 15.5rem; /* Adjusted for larger screens */
+  }
+  .elevator-card video {
+    max-height: 14rem; /* Cap height for larger screens */
+  }
+}
 /* Code Block Styling */
 .code-block {
   background-color: var(--code-bg);
