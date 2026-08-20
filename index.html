@@ -1,342 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meshack Kipkosgei Mitei - Data Science & IT Portfolio</title>
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for social media icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Data Science and IT portfolio by Meshack Kipkosgei Mitei, showcasing online voting systems, housing price predictions, and healthcare visualizations">
-  <meta name="keywords" content="data science, data analytics, web development, python, sql, machine learning">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meshack Kipkosgei Mitei — Data Analyst & IT Developer</title>
+<meta name="description" content="Portfolio of Meshack Kipkosgei Mitei, IT graduate and data analyst specializing in Python, SQL, Power BI, and web-based data solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-navy text-offwhite font-inter antialiased scroll-smooth">
-  <!-- Navigation -->
-  <nav class="flex justify-between items-center pl-0 pr-4 py-4">
-    <div class="flex items-center justify-start flex-nowrap">
-      <img src="images/Logo.png" class="h-10 md:h-12 flex-shrink-0">
-      <a href="#home" class="flex items-center">
-        <h1 class="text-2xl font-bold tracking-tight whitespace-nowrap mr-3 md:mr-4" style="word-spacing: 0.2em;">
-          Meshack Mitei
-        </h1>
-      </a>
-    </div>
-    <button id="nav-toggle" class="text-gray-300 hover:text-cyan focus:outline-none md:hidden">
-      <i class="fas fa-bars text-2xl"></i>
-    </button>
-    <ul class="nav-links hidden md:flex space-x-6 text-offwhite">
-      <li><a href="#home" class="hover:text-cyan">Home</a></li>
-      <li><a href="#about" class="hover:text-cyan">About</a></li>
-      <li><a href="#skills-experience" class="hover:text-cyan">Skills & Experience</a></li>
-      <li><a href="#projects" class="hover:text-cyan">Projects</a></li>
-      <li><a href="#elevator-pitch" class="hover:text-cyan">Elevator Pitch</a></li>
-      <li><a href="#contact" class="hover:text-cyan">Contact</a></li>
-    </ul>
-  </nav>
+<body>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center justify-center bg-navy text-offwhite">
-    <div class="hero-container">
-      <div class="profile-image-container">
-        <div class="hexagon">
-          <img 
-            src="images/bg.png" 
-            alt="Profile picture of Meshack Kipkosgei Mitei" 
-            class="hexagon-image">        
-        </div>
-        <div class="hexagon-glow"></div>
-      </div>
-      <h1 class="text-5xl md:text-6xl font-bold mb-4 tracking-tight animate-fade-in">Hi, I'm Meshack Kipkosgei Mitei</h1>
-      <p class="text-xl md:text-2xl mb-6 text-gray-300">Data Analyst | Driving Impact Through Data & Technology</p>
-      <a href="#projects" class="bg-cyan text-navy px-6 py-3 rounded-full font-semibold hover:bg-cyan transition-colors duration-200">Explore My Work</a>
-    </div>
-  </section>
+<nav id="mainNav">
+  <a href="#home" class="brand">
+    <img src="images/logo.png" alt="MKM logo" class="brand-mark-img">
+    Meshack Mitei
+  </a>
+  <button id="nav-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#more">More</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- About Section -->
-  <section id="about" class="py-16 bg-navy">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-8 text-center">About Me</h2>
-      <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-        <div class="md:w-1/2 mb-6 md:mb-0 flex flex-col items-center justify-center">
-          <p class="text-white leading-relaxed text-center max-w-2xl text-sm md:text-base">
-            Hello! I'm Meshack Kipkosgei Mitei, a passionate and curious IT student currently pursuing a Bachelor 
-            of Science in Information Technology at Murang’a University of Technology. I'm also enrolled in 
-            the Data Analytics program at ALX Africa, where I'm building a solid foundation in tools like
-            Excel, SQL, Power BI, and Python. Over time, I’ve developed a strong interest in data 
-            driven solutions, and my goal is to grow into a data science role where I can create meaningful impact.
-            I'm especially motivated to apply data science in fields like agriculture, healthcare, 
-            and education to help solve real-world challenges and improve lives across Africa. 
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills, Experience, Education Section -->
-  <section id="skills-experience" class="py-20 bg-navy">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-10 text-center">My Background</h2>
-      <div class="tab-container">
-        <!-- Skills Tab -->
-       <!-- Skills Tab -->
-<div class="tab">
-  <h3 class="tab-title" tabindex="0">Skills</h3>
-  <div class="description">
-
-    <!-- Nested Tabs for Technical & Soft Skills -->
-    <div class="nested-tabs mt-4">
-      <div class="flex space-x-4 mb-4">
-        <button class="nested-tab-btn active" data-target="technical-skills">Technical Skills</button>
-        <button class="nested-tab-btn" data-target="soft-skills">Soft Skills</button>
-      </div>
-
-      <!-- Technical Skills -->
-      <div class="nested-tab-content" id="technical-skills">
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li><strong>Programming & Data Analytics:</strong> Python, SQL, JavaScript, PHP</li>
-          <li><strong>Data Visualization:</strong> Tableau, Power BI</li>
-          <li><strong>Web Development:</strong> HTML, CSS, React.js, Tailwind CSS, Laravel</li>
-          <li><strong>Database Management:</strong> MySQL</li>
-          <li><strong>Networking:</strong> Cisco switch and router configuration</li>
-          <li><strong>Operating Systems:</strong> Windows and Linux</li>
-          <li><strong>Office Tools:</strong> Microsoft Word, Excel, PowerPoint</li>
-        </ul>
-      </div>
-
-      <!-- Soft Skills -->
-      <div class="nested-tab-content hidden" id="soft-skills">
-        <ul class="list-disc list-inside text-gray-300 space-y-1">
-          <li>Clear and professional communication</li>
-          <li>Critical thinking and structured problem-solving</li>
-          <li>Teamwork and agile collaboration using tools like Slack and Trello</li>
-          <li>Managing time and meeting tight deadlines in remote environments</li>
-          <li>Professionalism, personal branding, and ethical responsibility</li>
-          <li>Flexibility and the ability to adapt to new challenges quickly</li>
-        </ul>
-      </div>
-    </div>
-
+<section id="home">
+  <div class="terminal-line mono">Data Analyst<span class="caret"></span></div>
+  <div class="avatar">
+    <img src="images/profile.png" alt="Meshack Kipkosgei Mitei" class="avatar-img">
   </div>
-</div>
-
-        <!-- Experience Tab -->
-<div class="tab">
-  <h3 class="tab-title" tabindex="0">Experience</h3>
-  <div class="description">
-    <ul class="list-disc list-inside text-gray-300 space-y-2">
-      <li>
-        <strong>Online Voting System:</strong> Designed and implemented a secure web-based voting platform using HTML, CSS, JavaScript, PHP, and MySQL. Focused on user authentication and real-time results.
-      </li>
-      <li>
-        <strong>Housing Price Prediction Model:</strong> Developed a regression-based machine learning model in Python using Pandas and Scikit-learn. Visualized insights with Matplotlib to predict real estate trends.
-      </li>
-      <li>
-        <strong>Sales Insight Dashboard:</strong> Created an interactive Power BI dashboard to visualize key performance indicators and sales trends for informed decision-making.
-      </li>
-    </ul>
+  <h1 class="hero-title">Meshack Kipkosgei Mitei</h1>
+  <p class="hero-role">Data Analyst <span class="accent">&</span> IT Professional — turning data into decisions across <span class="accent">Africa</span></p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn btn-primary"><i class="fas fa-arrow-down"></i> Explore my work</a>
+    <a href="#contact" class="btn btn-outline"><i class="fas fa-envelope"></i> Get in touch</a>
   </div>
-</div>
+</section>
 
-        <!-- Education Tab -->
-        <div class="tab">
-          <h3 class="tab-title" tabindex="0">Education</h3>
-          <div class="description">
-            <ul class="list-disc list-inside text-gray-300">
-              <li>BSc in Information Technology, Murang'a University of Technology (2022 - Present)</li>
-              <li>Data Analytics Program, ALX Africa (In Progress – Expected Completion: 2025 )</li>
-            </ul>
-          </div>
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">Who I am</span>
+    <h2 class="sec-title">About me</h2>
+    <div class="about-grid">
+      <div class="term-card">
+        <div class="term-bar">
+          <span class="term-dot" style="background:#f87171"></span>
+          <span class="term-dot" style="background:#fbbf24"></span>
+          <span class="term-dot" style="background:#34d399"></span>
+        </div>
+        <div class="term-body">
+          <span class="cmt"></span>
+          <p>Information Technology graduate with hands-on experience in software development, data analytics, and AI-driven solutions. Skilled in Python, SQL, Excel, Power BI, Django, Laravel, React.js, PostgreSQL, and data visualization.</p>
+          <p>Proven track record building web-based systems and data-driven applications through academic and independent projects committed to using technology, data, and AI to solve real-world challenges and drive innovation across Africa.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 bg-navy">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-10 text-center text-white">My Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Project 1: Online Voting System -->
-      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-        <div class="image-container">
-          <img src="images/vote.png" alt="Online Voting System" class="w-auto h-48 object-contain mx-auto">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white">Online Voting System</h3>
-          <p class="text-gray-300 mt-2">
-            <strong>Purpose:</strong> To streamline the election process by providing a secure and accessible digital voting platform for students and civic users.<br>
-            <strong>Challenges:</strong> Ensuring vote integrity, preventing duplicate votes, and implementing secure login authentication.<br>
-            <strong>Solution:</strong> Built with HTML, CSS, JavaScript, PHP, and SQL, the system includes role-based access, real-time vote tallying, and secure database handling.
-          </p>
-          <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
-        </div>
+      <div class="stat-col">
+        <div class="stat-tile"><span class="k">EDUCATION</span><span class="v">BSc Information Technology, Murang'a University of Technology</span></div>
+        <div class="stat-tile"><span class="k">CERTIFICATION</span><span class="v">Data Analytics, ALX Africa</span></div>
+         <div class="stat-tile"><span class="k">BASED IN</span><span class="v">Kenya</span></div>
       </div>
-
-      <!-- Project 2: Housing Price Prediction -->
-      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-        <div class="image-container">
-          <img src="images/model.png" alt="Housing Pricing Prediction Model" class="w-auto h-48 object-contain mx-auto">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white">Housing Price Prediction</h3>
-          <p class="text-gray-300 mt-2">
-            <strong>Purpose:</strong> To assist real estate stakeholders in predicting housing prices using historical data and machine learning.<br>
-            <strong>Challenges:</strong> Handling missing data, feature selection, and model evaluation to ensure accuracy.<br>
-            <strong>Solution:</strong> Leveraged Python with Pandas and Scikit-learn to build regression models, supported by data visualizations using Matplotlib.
-          </p>
-          <a href="https://github.com/MESHACK-MITEI/My-H.P.P-Notebook/blob/main/projectML.ipynb" class="text-cyan hover:underline mt-4 inline-block">View Notebook</a>
-        </div>
-      </div>
-
-      <!-- Project 3: Sales Insight Dashboard -->
-      <div class="project-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-        <div class="image-container">
-          <img src="images/dashboard.png" alt="Sales Insight Dashboard" class="w-auto h-48 object-contain mx-auto">
-        </div>
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white">Sales Insight Dashboard</h3>
-          <p class="text-gray-300 mt-2">
-            <strong>Purpose:</strong> To help sales teams and managers monitor performance and make data-driven decisions.<br>
-            <strong>Challenges:</strong> Integrating large datasets, ensuring report interactivity, and presenting insights clearly.<br>
-            <strong>Solution:</strong> Created an interactive dashboard using Power BI featuring KPIs, regional trends, time-series charts, and category-wise breakdowns.
-          </p>
-          <a href="#" class="text-cyan hover:underline mt-4 inline-block">View Project</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
 
+<section id="background">
+  <div class="wrap">
+    <span class="eyebrow">// 02 — background</span>
+    <h2 class="sec-title">Skills &amp; experience</h2>
+
+    <div class="tabbar" role="tablist">
+      <button class="tabbtn active" data-tab="tech">Technical skills</button>
+      <button class="tabbtn" data-tab="soft">Soft skills</button>
+      <button class="tabbtn" data-tab="exp">Experience</button>
+      <button class="tabbtn" data-tab="edu">Education</button>
+    </div>
+
+    <div class="tabpanel active" id="tech">
+      <div class="chip-group">
+        <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">JavaScript</span>
+        <span class="chip">PHP</span><span class="chip">Django</span><span class="chip">Laravel</span>
+        <span class="chip">React.js</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span>
+        <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Excel</span>
+        <span class="chip">HTML/CSS</span><span class="chip">Tailwind CSS</span>
+        <span class="chip">Cisco networking</span><span class="chip">Linux</span>
       </div>
     </div>
-  </section>
 
- <!-- Elevator Pitch and Testimonials Section -->
-<section id="elevator-pitch" class="py-20 bg-gray-900 dark:bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-10 text-center text-white dark:text-gray-800">Elevator Pitch, Hobbies & Testimonials</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Elevator Pitch Card -->
-<!-- Elevator Pitch Card -->
-<div class="elevator-card bg-gray-800 rounded-xl shadow-lg overflow-hidden">
-  <div class="media-container">
-    <video class="w-full h-auto max-h-48 object-contain mx-auto" controls poster="images/elevator-poster.jpg" loading="lazy">
-      <source src="images/ELv.mp4" type="video/mp4">
-      <source src="images/Elevator.webm" type="video/webm">
-      <track src="captions/elevator-captions.vtt" kind="subtitles" srclang="en" label="English" default>
-      Your browser does not support the video tag. Please <a href="https://your-video-link.com" class="text-cyan hover:underline">watch the pitch here</a> or contact me for details.
-    </video>
+    <div class="tabpanel" id="soft">
+      <ul class="soft-list">
+        <li>Clear and professional communication</li>
+        <li>Critical thinking and structured problem-solving</li>
+        <li>Teamwork and agile collaboration using tools like Slack and Trello</li>
+        <li>Managing time and meeting tight deadlines in remote environments</li>
+        <li>Professionalism, personal branding, and ethical responsibility</li>
+        <li>Flexibility and the ability to adapt to new challenges quickly</li>
+      </ul>
+    </div>
+
+    <div class="tabpanel" id="exp">
+      <ul class="exp-list">
+        <li><strong>Trainee Software Developer, ICT Authority</strong> — contributed to software development tasks within a government ICT environment, gaining hands-on experience in professional development workflows and collaborative project delivery.</li>
+        <li><strong>SACCO Management System</strong> — built a full digital platform for SACCOs to manage member accounts, savings, loans, and transactions using Django and PostgreSQL.</li>
+        <li><strong>Online Voting System</strong> — designed and implemented a secure web-based voting platform using HTML, CSS, JavaScript, PHP, and MySQL, focused on authentication and real-time results.</li>
+        <li><strong>Housing Price Prediction Model</strong> — built a regression-based ML model in Python with Pandas and Scikit-learn, visualized with Matplotlib to predict real estate trends.</li>
+        <li><strong>Sales Insight Dashboard</strong> — created an interactive Power BI dashboard visualizing KPIs and sales trends for informed decision-making.</li>
+      </ul>
+    </div>
+
+    <div class="tabpanel" id="edu">
+      <div class="edu-item">
+        <div class="role">BSc in Information Technology <i class="fas fa-circle-check" style="color:var(--teal);font-size:.8rem;margin-left:.4rem;"></i></div>
+        <div class="when">Murang'a University of Technology · 2022 – 2026</div>
+      </div>
+      <div class="edu-item">
+        <div class="role">Data Analytics Program <i class="fas fa-circle-check" style="color:var(--teal);font-size:.8rem;margin-left:.4rem;"></i></div>
+        <div class="when">ALX Africa · Completed</div>
+      </div>
+    </div>
   </div>
-  <div class="p-6">
-    <h3 class="text-xl font-semibold text-offwhite">My Elevator Pitch</h3>
-    <p class="text-gray-300 mt-2">
-      A concise pitch highlighting my expertise in SQL, Python, and Tableau, with a focus on delivering data-driven solutions for sustainability in healthcare and agriculture.
-    </p>
-    <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-cyan hover:underline mt-4 inline-block" aria-label="Connect with Meshack on LinkedIn">Connect with Me</a>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <span class="eyebrow"> Projects</span>
+    <h2 class="sec-title">Selected work</h2>
+    <div class="proj-grid">
+
+      <div class="proj-card">
+        <div class="proj-titlebar">
+          <span class="fname">sacco_system.py</span>
+          <div class="proj-dots"><span style="background:#f87171"></span><span style="background:#fbbf24"></span><span style="background:#34d399"></span></div>
+        </div>
+        <div class="proj-visual">
+          <img src="images/sacco-system.png" alt="SACCO Management System dashboard screenshot" class="proj-img">
+        </div>
+        <div class="proj-body">
+          <h3>SACCO Management System</h3>
+          <span class="lbl">PURPOSE</span>
+          <p class="line">A digital platform for SACCOs to manage member accounts, savings, loans, and transactions in one place.</p>
+          <span class="lbl">CHALLENGE</span>
+          <p class="line">Handling secure member authentication, accurate financial record-keeping, and reliable loan/savings tracking.</p>
+          <span class="lbl">SOLUTION</span>
+          <p class="line">Built with Django and PostgreSQL — structured member and transaction management with a clean, role-based interface.</p>
+          <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+            <a href="https://motorsacco-client.vercel.app/" target="_blank" rel="noopener" class="proj-link">Client portal <i class="fas fa-arrow-right"></i></a>
+            <a href="https://ms-system-admin.vercel.app/" target="_blank" rel="noopener" class="proj-link">Admin portal <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-titlebar">
+          <span class="fname">voting_system.php</span>
+          <div class="proj-dots"><span style="background:#f87171"></span><span style="background:#fbbf24"></span><span style="background:#34d399"></span></div>
+        </div>
+        <div class="proj-visual">
+          <img src="images/voting-system.png" alt="Online Voting System interface screenshot" class="proj-img">
+        </div>
+        <div class="proj-body">
+          <h3>Online Voting System</h3>
+          <span class="lbl">PURPOSE</span>
+          <p class="line">A secure, accessible digital voting platform for students and civic users.</p>
+          <span class="lbl">CHALLENGE</span>
+          <p class="line">Ensuring vote integrity, preventing duplicate votes, and implementing secure login authentication.</p>
+          <span class="lbl">SOLUTION</span>
+          <p class="line">Built with HTML, CSS, JavaScript, PHP, and SQL — role-based access, real-time tallying, secure database handling.</p>
+          <a href="#" class="proj-link">View project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-titlebar">
+          <span class="fname">housing_model.ipynb</span>
+          <div class="proj-dots"><span style="background:#f87171"></span><span style="background:#fbbf24"></span><span style="background:#34d399"></span></div>
+        </div>
+        <div class="proj-visual">
+          <img src="images/housing-model.png" alt="Housing Price Prediction interface screenshot" class="proj-img">
+        </div>
+        <div class="proj-body">
+          <h3>Housing Price Prediction</h3>
+          <span class="lbl">PURPOSE</span>
+          <p class="line">Helps real estate stakeholders predict housing prices from historical data.</p>
+          <span class="lbl">CHALLENGE</span>
+          <p class="line">Handling missing data, feature selection, and model evaluation to ensure accuracy.</p>
+          <span class="lbl">SOLUTION</span>
+          <p class="line">Regression models built with Python, Pandas, and Scikit-learn, visualized with Matplotlib.</p>
+          <a href="https://github.com/MESHACK-MITEI/My-H.P.P-Notebook/blob/main/projectML.ipynb" target="_blank" rel="noopener" class="proj-link">View notebook <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-titlebar">
+          <span class="fname">sales_dashboard.pbix</span>
+          <div class="proj-dots"><span style="background:#f87171"></span><span style="background:#fbbf24"></span><span style="background:#34d399"></span></div>
+        </div>
+        <div class="proj-visual">
+          <img src="images/sales-dashboard.png" alt="Sales Insight Dashboard screenshot" class="proj-img">
+        </div>
+        <div class="proj-body">
+          <h3>Sales Insight Dashboard</h3>
+          <span class="lbl">PURPOSE</span>
+          <p class="line">Helps sales teams and managers monitor performance and make data-driven decisions.</p>
+          <span class="lbl">CHALLENGE</span>
+          <p class="line">Integrating large datasets, keeping reports interactive, presenting insights clearly.</p>
+          <span class="lbl">SOLUTION</span>
+          <p class="line">Interactive Power BI dashboard with KPIs, regional trends, time-series and category breakdowns.</p>
+          <a href="#" class="proj-link">View project <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
   </div>
-</div>
 
-
-      <!-- Placeholder for Testimonials (Add more cards as needed) -->
-      <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-  <div class="p-6">
-    <h3 class="text-xl font-semibold text-white dark:text-gray-800">Hobbies</h3>
-    <ul class="list-disc list-inside text-gray-300 dark:text-gray-600 mt-2 space-y-1">
-      <li>Playing football</li>
-      <li>Watching documentaries</li>
-      <li>Spending time in nature</li>
-      <li>Reading inspirational books</li>
-       <li>Sociolizing</li>
-    </ul>
-    <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read More About Me</a>
-  </div>
-</div>
-
-      <!-- Add more testimonial cards as needed -->
-       <div class="project-card bg-gray-800 dark:bg-gray-100 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
-        <div class="p-6">
-          <h3 class="text-xl font-semibold text-white dark:text-gray-800">Testimonial 1</h3>
-          <p class="text-gray-300 dark:text-gray-600 mt-2">
-           </p>
-          <a href="#" class="text-teal-600 dark:text-teal-500 hover:underline mt-4 inline-block">Read Full Testimonial</a>
+<section id="more">
+  <div class="wrap">
+    <span class="eyebrow"></span>
+    <h2 class="sec-title">Pitch &amp; interests</h2>
+    <div class="pitch-grid">
+      <div class="pitch-card">
+        <h3>Elevator pitch</h3>
+        <p>A qualified IT professional and data analyst with expertise in SQL, Python, and Power BI, focused on delivering data-driven solutions for sustainability in healthcare and agriculture.</p>
+        <a href="https://linkedin.com/in/meshack-mitei-892a8b336" target="_blank" rel="noopener" class="proj-link">Connect on LinkedIn <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="pitch-card">
+        <h3>Outside of work</h3>
+        <div class="hobby-list">
+          <span class="hobby-chip">⚽ Football</span>
+          <span class="hobby-chip">🎬 Documentaries</span>
+          <span class="hobby-chip">🌿 Nature</span>
+          <span class="hobby-chip">📚 Reading</span>
+          <span class="hobby-chip">🤝 Socializing</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-navy text-offwhite">
-    <div class="max-w-7xl mx-auto px-4">
-      <h2 class="text-4xl font-bold mb-10 text-center">Contact Me</h2>
-      <div class="flex flex-col md:flex-row gap-12">
-        <!-- Contact Info -->
-        <div class="md:w-1/3 contact-info">
-          <div class="mb-6 flex items-center">
-            <i class="fas fa-envelope text-cyan mr-3 text-xl"></i>
-            <span class="text-gray-300">meshackkipkosgei374@gmail.com</span>
-          </div>
-          <div class="mb-6 flex items-center">
-            <i class="fas fa-phone text-cyan mr-3 text-xl"></i>
-            <span class="text-gray-300">+254 729-886-938</span>
-          </div>
-          <div class="flex flex-col space-y-4 mb-8 social-icons">
-            <a href="https://www.facebook.com/mesh.ocil" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-facebook-f text-xl"></i></a>
-            <a href="https://x.com/MeshackKip4439?t=bkn42qVDqGjGelSACY7x0A&s=09" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-twitter text-xl"></i></a>
-            <a href="https://www.instagram.com/mkmitei?igsh=YzljYTk1ODg3Zg==" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-instagram text-xl"></i></a>
-            <a href="https://wa.me/254708128761" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-whatsapp text-xl"></i></a>
-            <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200"><i class="fab fa-linkedin-in text-xl"></i></a>
-          </div>
-          <div class="relative">
-            <div class="chat-bubble">
-              <a href="images/Meshack_Mitei_CV.pdf" target="_blank" class="bg-cyan text-navy px-4 py-2 rounded-full hover:bg-cyan transition-colors duration-200 text-center">View CV</a>
-            </div>
-            <div class="cv-buttons space-x-4 mt-4">
-              <a href="images/CV.pdf" target="_blank" class="interactive-btn">View CV</a>
-              <a href="images/CV.pdf" download class="interactive-btn">Download CV</a>
-            </div>
-          </div>
-        </div>
-        <!-- Contact Form -->
-        <div class="md:w-2/3 contact-form">
-          <form action="https://formspree.io/f/xzzrzlvo" method="POST" onsubmit="handleSubmit(event)" class="space-y-8">
-            <input type="hidden" name="_next" value="/thank-you.html">
-            <div>
-              <input type="text" id="name" name="name" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your name" required>
-            </div>
-            <div>
-              <input type="email" id="email" name="email" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" placeholder="Enter your email address" required>
-            </div>
-            <div>
-              <textarea id="message" name="message" class="w-full p-4 bg-gray-800 border border-gray-700 rounded-lg text-offwhite placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan transition-all duration-200" rows="4" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" id="submit-button" class="bg-cyan text-navy px-6 py-3 rounded-lg font-semibold hover:bg-cyan transition-colors duration-200">
-              Send Message
-            </button>
-          </form>
+<section id="contact">
+  <div class="wrap">
+    <span class="eyebrow">Contact</span>
+    <h2 class="sec-title">Let's talk</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="info-row"><i class="fas fa-envelope"></i> meshackkipkosgei374@gmail.com</div>
+        <div class="info-row"><i class="fas fa-phone"></i> +254 729-886-938</div>
+        <div class="info-row"><i class="fas fa-location-dot"></i> Kenya</div>
+        <a href="images/CV.pdf" target="_blank" class="btn btn-outline" style="margin-top:1rem;"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+        <div class="social-row">
+          <a href="https://www.facebook.com/mesh.ocil" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/MeshackKip4439" target="_blank" rel="noopener" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/mkmitei" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/254708128761" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://linkedin.com/in/meshack-mitei-892a8b336" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/MESHACK-MITEI" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-navy text-offwhite py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p class="text-gray-300">© 2025 Meshack Kipkosgei Mitei. All rights reserved.</p>
-      <div class="flex justify-center space-x-6 mt-4">
-        <a href="https://linkedin.com/in/meshack-mitei-892a8b336" class="text-gray-300 hover:text-cyan transition-colors duration-200">LinkedIn</a>
-        <a href="https://github.com/MESHACK-MITEI" class="text-gray-300 hover:text-cyan transition-colors duration-200">GitHub</a>
-        <a href="https://x.com/MeshackKip4439?t=bkn42qVDqGjGelSACY7x0A&s=09" class="text-gray-300 hover:text-cyan transition-colors duration-200">X</a>
+      <div>
+        <form action="https://formspree.io/f/xzzrzlvo" method="POST">
+          <input type="hidden" name="_next" value="/thank-you.html">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email address" required>
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn">Send message <i class="fas fa-paper-plane"></i></button>
+        </form>
+        <p class="form-note" style="margin-top:.8rem;"></p>
       </div>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Link to JavaScript -->
-  <script src="script.js"></script>
+<footer>
+  <p>© 2026 Meshack Kipkosgei Mitei. All rights reserved.</p>
+  <div class="foot-links">
+    <a href="https://linkedin.com/in/meshack-mitei-892a8b336" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/MESHACK-MITEI" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://x.com/MeshackKip4439" target="_blank" rel="noopener">X</a>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
